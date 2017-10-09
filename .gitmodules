@@ -1,0 +1,6 @@
+[submodule "puppetlabs"]
+	path = puppetlabs
+	url = ssh://git@github.com/NYULibraries/packer-puppet-basedir.git
+[submodule "src/packer-puppet-basedir"]
+	path = src/packer-puppet-basedir
+	url = ssh://git@github.com/NYULibraries/packer-puppet-basedir.git
