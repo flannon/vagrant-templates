@@ -1,15 +1,16 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 #
+# working on https://www.stephenrlang.com/2016/01/setup-nfsv4-on-centos/
 
 Vagrant.require_version ">= 2.0.1"
 
-HOST_NAME = "templates"
+HOST_NAME = "nfs-server"
 MANIFEST = "#{HOST_NAME}"
 CPUS = "1"
 MEMORY = "1024"
-MULTIVOL = false
-MOUNTPOINT = "/mnt"
+MULTIVOL = true
+MOUNTPOINT = "/data"
 ENVIRONMENT = "development"
 PUPPET = "4.10.8"
 VAGRANTDIR = File.expand_path(File.dirname(__FILE__))
@@ -44,7 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.private_key_path = [ '~/.vagrant.d/insecure_private_key', '~/.ssh/id_rsa' ]
   config.vm.box = "NYULibraries/centos_7_3_1611"
 
-  config.vm.network "private_network", ip: "192.168.50.39",
+  config.vm.network "private_network", ip: "192.168.250.10",
     virtualbox__hostonly: true
   config.vm.network "forwarded_port", guest:  8080, host: 9080,
       virtualbox__hostonly: true
