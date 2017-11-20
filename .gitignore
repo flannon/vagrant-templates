@@ -55,7 +55,8 @@ doc/
 puppet/modules/thirdparty/*
 puppet/environments/*/modules/thirdparty/*
 
-# var
+# misc
 tmp/
 untracked-files/
-_depricated
+**/_depricated
+hieradata
