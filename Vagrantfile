@@ -4,7 +4,7 @@
 
 Vagrant.require_version ">= 2.0.1"
 
-HOST_NAME = "templates"
+HOST_NAME = "nfs-client"
 MANIFEST = "#{HOST_NAME}"
 CPUS = "1"
 MEMORY = "1024"
@@ -44,10 +44,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.private_key_path = [ '~/.vagrant.d/insecure_private_key', '~/.ssh/id_rsa' ]
   config.vm.box = "NYULibraries/centos_7_3_1611"
 
-  config.vm.network "private_network", ip: "192.168.50.39",
+  config.vm.network "private_network", ip: "192.168.250.11",
     virtualbox__hostonly: true
-  config.vm.network "forwarded_port", guest:  8080, host: 9080,
-      virtualbox__hostonly: true
+  #config.vm.network "forwarded_port", guest:  8080, host: 9080,
+  #    virtualbox__hostonly: true
 
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
