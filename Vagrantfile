@@ -46,7 +46,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: "192.168.50.39",
     virtualbox__hostonly: true
+  config.vm.network "forwarded_port", guest:  80, host: 7080,
+      virtualbox__hostonly: true
   config.vm.network "forwarded_port", guest:  8080, host: 9080,
+      virtualbox__hostonly: true
+  config.vm.network "forwarded_port", guest:  8081, host: 9081,
+      virtualbox__hostonly: true
+  config.vm.network "forwarded_port", guest:  8082, host: 9082,
+      virtualbox__hostonly: true
+  config.vm.network "forwarded_port", guest:  8089, host: 9089,
+      virtualbox__hostonly: true
+  config.vm.network "forwarded_port", guest:  8090, host: 9090,
+      virtualbox__hostonly: true
+  config.vm.network "forwarded_port", guest:  8091, host: 9091,
       virtualbox__hostonly: true
 
   config.vm.provider "virtualbox" do |vb|
