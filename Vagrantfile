@@ -12,6 +12,7 @@ MULTIVOL = false
 MOUNTPOINT = "/mnt"
 ENVIRONMENT = "development"
 PUPPET = "4.10.8"
+IPADDR = "192.168.50.39"
 VAGRANTDIR = File.expand_path(File.dirname(__FILE__))
 VAGRANTFILE_API_VERSION = "2"
 DATADIR = "#{VAGRANTDIR}/puppetlabs/code/environments/#{ENVIRONMENT}/data"
@@ -44,7 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.private_key_path = [ '~/.vagrant.d/insecure_private_key', '~/.ssh/id_rsa' ]
   config.vm.box = "NYULibraries/centos_7_3_1611"
 
-  config.vm.network "private_network", ip: "192.168.50.39",
+  config.vm.network "private_network", ip: IPADDR,
     virtualbox__hostonly: true
   config.vm.network "forwarded_port", guest:  80, host: 7080,
       virtualbox__hostonly: true
