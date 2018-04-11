@@ -71,4 +71,4 @@ To connect to your vagrant box you can,
 
 #### tl;dr
 
-The puppetlabs directory is a plain vanilla deployement of Puppet 4 that uses r10k to deploy dynamic environment.  You can easily swap in your own puppetlabs directory and run r10k on your own control repo.  You'll just need to set MANIFEST in the Vagrantfile to the name of your systems manifest file.
+The puppetlabs directory is a plain vanilla deployement of Puppet 4 that uses r10k to deploy dynamic environment.  You can easily swap in your puppet environments by running r10k agains your r10k.yaml file. 
