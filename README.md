@@ -51,11 +51,11 @@ vagrant-templates uses several vagrant plugins, depending on which system you ar
 
 #### Usage
 
-Clone vagrant-templates, change the value of HOST_NAME in the Vagrantfile to the name of the system you want to boot, run r10k and then `vagrant up`.
+Clone vagrant-templates, change the value of HOST_NAME in the Vagrantfile to the name of the system/(puppet role) you want to boot, run r10k and then `vagrant up`.
 
 i.e. To build the nginx template you can do the following,
 
-    $ git clone https://gitlab.com/flannon/vagrant-templates vagrant-nginx
+    $ git clone https://github.com/flannon/vagrant-templates vagrant-nginx
     $ cd vagrant-nginx
 
     Edit the Vagrantfile ( HOST_NAME = "nginx")
