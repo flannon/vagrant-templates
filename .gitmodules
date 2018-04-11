@@ -1,3 +1,0 @@
-[submodule "puppetlabs"]
-	path = puppetlabs
-	url = ssh://git@github.com/NYULibraries/packer-puppet-basedir.git
