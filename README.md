@@ -35,7 +35,7 @@ everything you need to get vagrant running
     $ brew cask install vagrant
     $ brew install r10k
 
-r10k comes packaged as a gem, so to install it run,
+r10k comes packaged as a gem, so to install it you can run,
 
     $ gem install r10k
 
@@ -51,10 +51,11 @@ vagrant-templates uses several vagrant plugins, depending on which system you ar
 
 #### Usage
 
-Clone vagrant-templates, change the value of HOST_NAME in the Vagrantfile to the name of the system/(puppet role) you want to boot, run r10k and then `vagrant up`.
+Clone the latest release of this repo, change the value of HOST_NAME in the Vagrantfile to the name of the system/(puppet role) you want to boot, run r10k and then `vagrant up`. Cloning from 'master' may produce inconsistent results, check the [releases](https://github.com/flannon/vagrant-templates/releases) page to find the latest release of this repo.
 
-i.e. To build the nginx template you can do the following,
+i.e. To build the nginx from the v0.0.1 release of the vagant-templates repo you can do the following, 
 
+    $ git clone -b v0.0.1 --single-branch --depth 1 https://github.com/flannon/vagrant-templates.git vagrant-nginx
     $ git clone https://github.com/flannon/vagrant-templates vagrant-nginx
     $ cd vagrant-nginx
 
