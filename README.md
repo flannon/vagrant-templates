@@ -56,7 +56,6 @@ Clone the latest release of this repo, change the value of HOST_NAME in the Vagr
 i.e. To build the nginx from the v0.0.1 release of the vagant-templates repo you can do the following, 
 
     $ git clone -b v0.0.1 --single-branch --depth 1 https://github.com/flannon/vagrant-templates.git vagrant-nginx
-    $ git clone https://github.com/flannon/vagrant-templates vagrant-nginx
     $ cd vagrant-nginx
 
     Edit the Vagrantfile ( HOST_NAME = "nginx")
