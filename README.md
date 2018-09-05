@@ -60,8 +60,9 @@ i.e. To build the nginx from the v0.0.1 release of the vagant-templates repo you
 
     Edit the Vagrantfile ( HOST_NAME = "nginx")
 
+    $ git submodule update --init --recursive
     $ cd puppetlabs
-    $ r10k deploy environment development -p -v -c r10k/r10k-public.yaml
+    $ r10k deploy environment development -p -v -c r10k/r10k.yaml
     $ vagrant up
 
 
