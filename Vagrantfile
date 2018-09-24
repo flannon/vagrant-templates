@@ -12,7 +12,7 @@ MULTIVOL = false
 MOUNTPOINT = "/mnt"
 ENVIRONMENT = "development"
 PUPPET = "4.10.8"
-IPADDR = "192.168.50.39"
+IPADDR = "192.168.50.38"
 VAGRANTDIR = File.expand_path(File.dirname(__FILE__))
 VAGRANTFILE_API_VERSION = "2"
 DATADIR = "#{VAGRANTDIR}/puppetlabs/code/environments/#{ENVIRONMENT}/data"
@@ -119,6 +119,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                        "--strict_variables",
                        #"--hiera_config /vagrant/puppetlabs/puppet/hiera.yaml"
                        ] 
+  end
+
+  if MANIFEST == 'archivesspace'
+    config.vm.provision "shell", inline: "systemctl start #{MANIFEST}"
   end
 
 end

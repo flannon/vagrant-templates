@@ -8,5 +8,6 @@ r10k:
 
 .PHONY: clean
 clean:
+	cd puppetlabs; \
 	rm -rf ${ENVIRONMENTSDIR}/*
 
