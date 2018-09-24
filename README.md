@@ -13,9 +13,9 @@ Templates for building vagrant boxes
 
 #### Quick Setup
 
-  Set HOST_NAME in the Vagrantfile to the service you wnat to boot, load the puppet config and then `vagrant up`.
+ Set HOST_NAME in the Vagrantfile to the service you wnat to boot, load the puppet config and then run `vagrant up`.
+
     - HOST_NAME = 'archivesspace'
-    - cd puppetlabs
     - make
     - vagrant up
 
