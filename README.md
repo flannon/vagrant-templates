@@ -4,11 +4,20 @@ Templates for building vagrant boxes
 
 ## Table of Contents
 
+1. [Quick Setup](#quick-setup)
 1. [Overview](#overview)
 2. [Pre-Install](#pre-install)
 3. [Usage](#usage)
 4. [tl;dr](#tl:dr)
 
+
+#### Quick Setup
+
+  Set HOST_NAME in the Vagrantfile to the service you wnat to boot, load the puppet config and then `vagrant up`.
+    - HOST_NAME = 'archivesspace'
+    - cd puppetlabs
+    - make
+    - vagrant up
 
 #### Overview
 
@@ -60,9 +69,8 @@ i.e. To build the nginx from the v0.0.1 release of the vagant-templates repo you
 
     Edit the Vagrantfile ( HOST_NAME = "nginx")
 
-    $ git submodule update --init --recursive
     $ cd puppetlabs
-    $ r10k deploy environment development -p -v -c r10k/r10k.yaml
+    $ make
     $ vagrant up
 
 
