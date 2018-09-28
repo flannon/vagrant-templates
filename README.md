@@ -42,7 +42,6 @@ everything you need to get vagrant running
     $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     $ brew cask install virtualbox
     $ brew cask install vagrant
-    $ brew install r10k
 
 r10k comes packaged as a gem, so to install it you can run,
 
