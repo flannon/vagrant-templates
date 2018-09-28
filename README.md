@@ -68,7 +68,6 @@ i.e. To build the nginx from the v0.0.1 release of the vagant-templates repo you
 
     Edit the Vagrantfile ( HOST_NAME = "nginx")
 
-    $ cd puppetlabs
     $ make
     $ vagrant up
 
@@ -79,4 +78,4 @@ To connect to your vagrant box you can,
 
 #### tl;dr
 
-The puppetlabs directory is a plain vanilla deployement of Puppet 4 that uses r10k to deploy dynamic environment.  You can easily swap in your puppet environments by running r10k agains your r10k.yaml file. 
+The puppetlabs directory is a plain vanilla deployement of Puppet 4 that uses r10k to deploy dynamic environment.  You can easily swap in your puppet environments by running r10k against your own r10k.yaml file. 
