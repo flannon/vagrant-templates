@@ -1,7 +1,7 @@
 ---
 sources:
   puppet:
-    remote: 'https://github.com/NYULibraries/puppet-control-repo'
+    remote: 'https://github.com/nyudlts/puppet-control-repo'
     basedir: 'code/environments'
     invalid_branches: 'correct_and_warn'
     deploy:
